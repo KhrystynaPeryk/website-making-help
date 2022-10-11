@@ -1,0 +1,13 @@
+@import '../../../../index.scss';
+.home-section {
+    background-color: rgba(235, 237, 238, 0.6);
+    box-shadow: 20px -20px 20px -10px $purple;
+    border-radius: $roundCorners;
+    border: $purpleBorder;
+    height: 30vh;
+    position: relative;
+    top: 32vh;
+    margin-left: 15em;
+    padding: 4vh;
+    z-index: 10;
+}

@@ -1,0 +1,25 @@
+@import '../../index.scss';
+.main-container-page {
+    display: flex;
+    flex-direction: column;
+    height: 368vh;
+    background-image: url('../../assets/home-page.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    .home-section-container {
+        display: flex;
+        position: relative;
+    }
+    .services-section-container {
+        position: relative;
+    }
+    .about-section-container {
+        position: relative;
+    }
+    .contact-section-container {
+        position: relative;
+    }
+    .footer-container {
+        position: relative;
+    }
+}

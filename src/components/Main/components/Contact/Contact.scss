@@ -1,0 +1,58 @@
+@import '../../../../index.scss';
+.contact-section {
+    position: relative;
+    top: 40em;
+    background-color: rgba(235, 237, 238, 0.6);
+    height: 50vh;
+    padding: 5em;
+    .contact-section-box {
+        display: flex;
+        justify-content: space-evenly;
+        .contact-section-img {
+            width: 50vh;
+            height: 50vh;
+            background: no-repeat url('../../../../assets/mails-green.jpg');
+            background-size: 100%;
+        }
+        .form-container {
+            width: 50vh;
+            .form-sent-confirmation {
+                background-color: $pink;
+                border-radius: $roundCorners;
+                padding: 5%;
+                color: white;
+            }
+            .contact-form {
+                display: flex;
+                flex-direction: column;
+                height: 50vh;
+                color: white;
+                .input-line {
+                    position: relative;
+                    .contact-icons {
+                        position: relative;
+                        right: 21vh;
+                        bottom: 3.5vh;
+                        color: rgb(169, 169, 169);
+                    }
+                    .form-input {
+                        width: 88%;
+                        max-width: 100%;
+                        padding: 2% 6%;
+                        border-radius: $roundCorners;
+                        outline: none;
+                        border: none;
+                        font: inherit;
+                        background-color: rgb(231, 231, 231);
+                        &:not(:placeholder-shown) + span {
+                            visibility: hidden;
+                        }
+                    }
+                    &:last-of-type {
+                        margin-bottom: 2em;
+                    }
+                }
+            }
+        }
+    }
+}

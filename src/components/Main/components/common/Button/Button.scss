@@ -1,0 +1,15 @@
+@import '../../../../../index.scss';
+.btn {
+    background-color: $pink;
+    color: inherit;
+    border: 1px solid $pink;
+    border-radius: $roundCorners;
+    padding: 0.7em;
+    font: inherit;
+    transition: transform 0.25s;
+}
+.btn:hover {
+    cursor: pointer;
+    transform: translateY(-0.25em);
+    box-shadow: 0 0.5em 0.5em -0.4em $purple;
+}
