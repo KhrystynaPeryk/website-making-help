@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './Contact.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser, faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser'
 import Button from '../common/Button/Button'
 
 const Contact = () => {
@@ -13,31 +13,17 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(e.target)
-    setIsContactFormSubmitted(true)
-    console.log(`Message submitted: ${message} from ${name}, ${email}`)
+    const serviceID = 'default_service'
+    const publicKey = 'JrhpS7SMUL5Ebeq2T'
+    const templateID = 'template_vp66kxe'
+    emailjs.sendForm(serviceID, templateID, e.target, publicKey)
+      .then(() => {
+        setIsContactFormSubmitted(true)
+        console.log(`Message submitted: ${message} from ${name}, ${email}`)
+      }, (err) => {
+        alert(JSON.stringify(err));
+      });
   }
-
-//   const btn = document.getElementById('button');
-
-// document.getElementById('form')
-//  .addEventListener('submit', function(event) {
-//    event.preventDefault();
-
-//    btn.value = 'Sending...';
-
-//    const serviceID = 'default_service';
-//    const templateID = 'template_vp66kxe';
-
-//    emailjs.sendForm(serviceID, templateID, this)
-//     .then(() => {
-//       btn.value = 'Send Email';
-//       alert('Sent!');
-//     }, (err) => {
-//       btn.value = 'Send Email';
-//       alert(JSON.stringify(err));
-//     });
-// });
 
   return (
     <section className='contact-section' id='contact'>
@@ -61,7 +47,7 @@ const Contact = () => {
                 <span className='contact-icons'><FontAwesomeIcon icon={faEnvelope}/></span>
               </div>
               <div className='input-line'>
-                <textarea className='form-input' onChange={(e) => setMessage(e.target.value)} value={message} rows='5' placeholder='Message'></textarea>
+                <textarea className='form-input' onChange={(e) => setMessage(e.target.value)} value={message} rows='5' placeholder='Message' name='message'></textarea>
               </div>
               <Button buttonText='Send a message' type='submit' />
             </form>
