@@ -1,17 +1,17 @@
 @import '../../../../index.scss';
 .contact-section {
     position: relative;
-    top: 40em;
-    background-color: rgba(235, 237, 238, 0.6);
+    top: 25em;
     height: 50vh;
     padding: 5em;
+    z-index: 12;
     .contact-section-box {
         display: flex;
         justify-content: space-evenly;
         .contact-section-img {
-            width: 50vh;
-            height: 50vh;
-            background: no-repeat url('../../../../assets/mails-green.jpg');
+            width: 60vh;
+            height: 60vh;
+            background: no-repeat url('../../../../assets/contact-img.png');
             background-size: 100%;
         }
         .form-container {

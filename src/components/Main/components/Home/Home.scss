@@ -1,13 +1,25 @@
 @import '../../../../index.scss';
 .home-section {
-    background-color: rgba(235, 237, 238, 0.6);
-    box-shadow: 20px -20px 20px -10px $purple;
-    border-radius: $roundCorners;
-    border: $purpleBorder;
-    height: 30vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    top: 15vh;
     position: relative;
-    top: 32vh;
-    margin-left: 15em;
-    padding: 4vh;
-    z-index: 10;
+    width: 100%;
+    .home-section-content {
+        // background-color: rgba(235, 237, 238, 0.6);
+        // box-shadow: $shadow;
+        border-radius: $roundCorners;
+        // border: $purpleBorder;
+        height: 30vh;
+        padding: 4vh;
+        z-index: 10;
+    }
+    .home-section-img {
+        width: 60vh;
+        height: 60vh;
+        // background: no-repeat url('../../../../assets/home-img.png');
+        background: no-repeat url('../../../../assets/comp-prog.png');
+        background-size: 100%;
+    }
 }

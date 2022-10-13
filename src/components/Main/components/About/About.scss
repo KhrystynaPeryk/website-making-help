@@ -1,7 +1,20 @@
 @import '../../../../index.scss';
 .about-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     position: relative;
-    top: 35em;
-    height: 40vh;
-    color: $grey;
+    top: 20em;
+    width: 100%;
+    .about-section-content {
+        width: 80vh;
+        padding-bottom: 6em;
+    }
+    .about-section-img{
+        width: 70vh;
+        height: 60vh;
+        background: no-repeat url('../../../../assets/laptop-yellow.jpg');
+        background-size: 100%;
+    }
+
 }

@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './Contact.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import emailjs from 'emailjs-com';
 import Button from '../common/Button/Button'
 
 const Contact = () => {
@@ -12,9 +13,31 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    console.log(e.target)
     setIsContactFormSubmitted(true)
     console.log(`Message submitted: ${message} from ${name}, ${email}`)
   }
+
+//   const btn = document.getElementById('button');
+
+// document.getElementById('form')
+//  .addEventListener('submit', function(event) {
+//    event.preventDefault();
+
+//    btn.value = 'Sending...';
+
+//    const serviceID = 'default_service';
+//    const templateID = 'template_vp66kxe';
+
+//    emailjs.sendForm(serviceID, templateID, this)
+//     .then(() => {
+//       btn.value = 'Send Email';
+//       alert('Sent!');
+//     }, (err) => {
+//       btn.value = 'Send Email';
+//       alert(JSON.stringify(err));
+//     });
+// });
 
   return (
     <section className='contact-section' id='contact'>
@@ -28,7 +51,7 @@ const Contact = () => {
               <p>Thank you!</p>
             </div>
           ) : (
-            <form action='' className='contact-form' onSubmit={handleSubmit}>
+            <form method='POST' action='mailto: kristik991@gmail.com' className='contact-form' onSubmit={handleSubmit}>
               <div className='input-line'>
                 <input className='form-input' onChange={(e) => setName(e.target.value)} value={name} type='text' placeholder='      Name' name='name' required></input>
                 <span className='contact-icons'><FontAwesomeIcon icon={faUser} /></span>

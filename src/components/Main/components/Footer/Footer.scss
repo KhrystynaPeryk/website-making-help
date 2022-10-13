@@ -1,8 +1,44 @@
 @import '../../../../index.scss';
 .footer-section {
+    display: flex;
     position: relative;
-    top: 40em;
+    top: 30.5em;
     background-color: rgba(23, 30, 33, 0.6);
-    height: 22.5vh;
-    padding: 2em;
+    height: 18vh;
+    border-top: 1px solid rgb(23, 30, 33);
+    padding: 1em;
+    .footer-info {
+        width: 8em;
+        .footer-info-title {
+            padding: 0em;
+            font-weight: 400;
+        }
+        .footer-info-item {
+            font-size: small;
+            a,
+            a:hover,
+            a:focus,
+            a:active {
+                text-decoration: none;
+                color: inherit;
+            }
+            a:hover {
+                color: white;
+            }
+        }
+    }
+    .footer-socials {
+        width: 8em;
+        .footer-socials-title {
+            padding: 0em;
+            font-weight: 400;
+        }
+        .footer-socials-icons {
+            display: flex;
+            justify-content: space-evenly;
+            .footer-icon:hover {
+                color: white;
+            }
+        }
+    }
 }
