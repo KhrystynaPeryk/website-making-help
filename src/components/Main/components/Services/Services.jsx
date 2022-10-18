@@ -1,11 +1,9 @@
 import React from 'react'
 import './Services.scss'
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { openModal } from '../../../../store/actions/actions'
 import Button from '../common/Button/Button'
-import Modal from '../Modal/Modal'
 
-// we need redux to control modal state here (open a modal by clicking a get quote), and style Modal in Main.jsx
 const Services = () => {
   const ourServices = {
     service1: 'Website development',
@@ -13,7 +11,6 @@ const Services = () => {
     service3: 'Cloud Consulting'
   }
 
-  const modal = useSelector((state) => state.isModalOpen);
   const dispatch = useDispatch();
 
   const handleQuoteRequest = (service) => {
@@ -38,9 +35,6 @@ const Services = () => {
               <Button buttonText='Get a quote' onClick={() => handleQuoteRequest(ourServices.service3)} />
             </div>
           </div>
-        </div>
-        <div className='modal-container' style={modal ? {'display' : 'block'} : {'display' : 'none'}}>
-          <Modal />
         </div>
     </section>
   )
