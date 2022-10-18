@@ -13,6 +13,7 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    // setting up emailjs - the following 3 vars should be moved to env
     const serviceID = 'default_service'
     const publicKey = 'JrhpS7SMUL5Ebeq2T'
     const templateID = 'template_vp66kxe'
@@ -37,7 +38,7 @@ const Contact = () => {
               <p>Thank you!</p>
             </div>
           ) : (
-            <form method='POST' action='mailto: kristik991@gmail.com' className='contact-form' onSubmit={handleSubmit}>
+            <form className='contact-form' onSubmit={handleSubmit}>
               <div className='input-line'>
                 <input className='form-input' onChange={(e) => setName(e.target.value)} value={name} type='text' placeholder='      Name' name='name' required></input>
                 <span className='contact-icons'><FontAwesomeIcon icon={faUser} /></span>

@@ -15,7 +15,6 @@
             width: 20em;
             height: 25em;
             padding: 1em;;
-            // border: $purpleBorder;
             border-radius: $roundCorners;
             box-shadow: $shadow;
             background-color: rgb(235, 237, 238);
@@ -26,5 +25,12 @@
             cursor: pointer;
             transform: translateY(-0.25em);
         }
+    }
+    .modal-container {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 12;
     }
 }
