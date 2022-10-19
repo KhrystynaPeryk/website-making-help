@@ -6,4 +6,31 @@
     border-radius: $roundCorners;
     box-shadow: $shadow;
     background-color: white;
+    padding: 1em;
+    .modal-header {
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        position: relative;
+        .modal-close-button {
+            position: absolute;
+            right: 0;
+            border-radius: 50%;
+            margin-left: 1em;
+        }
+    }
+    .modal-info-text {
+        display: flex;
+        justify-content: center;
+        margin: 0 2em;
+    }
+    .sent-request-confirmation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 5em;
+        border: 1px solid black;
+        border-radius: $roundCorners;
+        background-color: $pink;
+    }
 }

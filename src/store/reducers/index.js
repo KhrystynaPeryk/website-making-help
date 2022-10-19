@@ -1,8 +1,9 @@
 import { combineReducers } from 'redux';
-import { isModalOpen } from './reducers';
+import { isModalOpen, clientService } from './reducers';
 
 const allReducers = combineReducers({
-    isModalOpen
+    isModalOpen,
+    clientService
 });
 
 export default allReducers;

@@ -1,7 +1,7 @@
 import React from 'react'
 import './Services.scss'
 import { useDispatch } from 'react-redux'
-import { openModal } from '../../../../store/actions/actions'
+import { openModal, clientServiceType } from '../../../../store/actions/actions'
 import Button from '../common/Button/Button'
 
 const Services = () => {
@@ -15,6 +15,7 @@ const Services = () => {
 
   const handleQuoteRequest = (service) => {
     console.log(service)
+    dispatch(clientServiceType(service))
     dispatch(openModal())
   }
   return (

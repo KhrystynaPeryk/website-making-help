@@ -1,4 +1,4 @@
-import { CLOSE_MODAL, OPEN_MODAL } from './types';
+import { CLOSE_MODAL, OPEN_MODAL, CLIENT_SERVICE_TYPE } from './types';
 
 export const openModal = () => {
     return {
@@ -9,5 +9,12 @@ export const openModal = () => {
 export const closeModal = () => {
     return {
         type: CLOSE_MODAL
+    }
+}
+
+export const clientServiceType = (service) => {
+    return {
+        type: CLIENT_SERVICE_TYPE,
+        payload: service
     }
 }
